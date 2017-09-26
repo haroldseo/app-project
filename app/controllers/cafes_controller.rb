@@ -1,4 +1,6 @@
 class CafesController < ApplicationController
+  before_action :authorize, except: [:index, :show]
+
   def index
     @cafes = Cafe.all
   end
