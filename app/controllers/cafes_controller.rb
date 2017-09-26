@@ -2,10 +2,15 @@ class CafesController < ApplicationController
   before_action :authorize, except: [:index, :show]
 
   def index
-    @cafes = Cafe.all
+    if logged_in? && current_user.admin
+      @cafes = Cafe.all
+    else
+      @cafes = Cafe.where(published: true)
+    end
   end
 
   def show
+    @cafe = Cafe.find(params[:id])
   end
 
   def new
@@ -14,6 +19,7 @@ class CafesController < ApplicationController
 
   def create
     @cafe = Cafe.new(cafe_params)
+    @cafe.published = true if current_user.admin
     if @cafe.save
       redirect_to cafes_path
     else

@@ -1,6 +1,11 @@
 
 <ul class='list-group'>
     <% @cafes.each do |c| %>
-        <li class='list-group-item'><%= c.name %></li>
+        <li class='list-group-item'>
+            <%= link_to c.name, cafe_path(c) %>
+            <% unless c.published %>
+                (Draft)
+            <% end %>
+        </li>
     <% end %>
 </ul>
