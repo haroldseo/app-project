@@ -1,9 +1,13 @@
-<%= form_tag sessions_path, {:class => ''} do %>
-<h1>Sign In</h1>
-    <%= label_tag :email, 'Email', class: '' %>
-    <%= text_field_tag :email, params[:email], class: '' %>
-    <%= label_tag :password, 'Password', class: '' %>
-    <%= password_field_tag :password, nil, class: '' %>
-    <%= submit_tag 'Log in', class: '' %>
-    <%= link_to "Don't have an account?", new_user_path, class: '' %>
+<%= form_tag sessions_path do %>
+    <div class="form-group">
+        <%= label_tag :email, 'Email' %>
+        <%= text_field_tag :email %>
+    </div>
+    <div class="form-group">
+        <%= label_tag :password, 'Password' %>
+        <%= password_field_tag :password %>
+    </div>
+
+    <%= submit_tag 'Log In', class: 'btn btn-primary' %>
+    <%= link_to "Don't have an account?", new_user_path %>
 <% end %>
