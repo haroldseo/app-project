@@ -11,6 +11,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if @user.save
+      redirect_to cafes_path 
+    else 
+      redirect_to new_user_path
+    end
   end
 
   def edit

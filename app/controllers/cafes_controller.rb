@@ -12,6 +12,11 @@ class CafesController < ApplicationController
 
   def create
     @cafe = Cafe.new(cafe_params)
+    if @cafe.save
+      redirect_to cafes_path
+    else
+      redirect_to new_cafe_path
+    end
   end
 
   def edit
