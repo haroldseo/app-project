@@ -3,9 +3,9 @@ class CafesController < ApplicationController
 
   def index
     if logged_in? && current_user.admin
-      @cafes = Cafe.all
+      @cafes = Cafe.all.order(name: :asc)
     else
-      @cafes = Cafe.where(published: true)
+      @cafes = Cafe.where(published: true).order(name: :asc)
     end
   end
 
@@ -35,6 +35,12 @@ class CafesController < ApplicationController
 
   def delete
   end
+
+  def toggle_publish
+    @cafe = Cafe.find(params[:id])
+    @cafe.update(published: !@cafe.published)
+    redirect_to cafes_path
+  end 
 
   private
   def cafe_params
