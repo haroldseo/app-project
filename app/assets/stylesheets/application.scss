@@ -31,6 +31,10 @@ body {
     background-color: rgba(255, 255, 255, 0) !important;
 }
 
-label, .navbar-light .navbar-text, .navbar-light .navbar-nav .nav-link {
+label, .navbar-light .navbar-text, .navbar-light .navbar-nav .nav-link, .suggestions, .cafe {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.list-group {
+    opacity: 0.8;
 }

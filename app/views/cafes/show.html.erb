@@ -1,8 +1,9 @@
-<h1><%= @cafe.name %></h1>
-<h4><%= @cafe.hours %></h4>
-<h4><%= @cafe.address %></h4>
-<h4><%= @cafe.phone %></h4>
+<h1 class="cafe"><%= @cafe.name %></h1>
+<h5 class="cafe"><%= @cafe.hours %></h5>
+<h5 class="cafe"><%= @cafe.address %></h5>
+<h5 class="cafe"><%= @cafe.phone %></h5>
 
+<br>
 <ul class='list-group'>
     <% @cafe.reviews.each do |r| %>
         <li class='list-group-item'><%= r.comment %>
