@@ -24,6 +24,7 @@ class CafesController < ApplicationController
     if @cafe.save
       redirect_to cafes_path
     else
+      flash[:danger] = "Please check required fields."
       redirect_to new_cafe_path
     end
   end

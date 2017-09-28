@@ -1,6 +1,6 @@
 <%= form_for @cafe do |f| %>
 <div class="form-group">
-    <%= f.label :name, 'Shop Name' %>
+    <%= f.label :name, 'Shop Name (required)' %>
     <%= f.text_field :name, class: 'form-control', placeholder: "Brew-tiful" %>
 </div>
 <div class="form-group">
@@ -19,7 +19,6 @@
 <%= f.submit 'Suggest Shop', class: 'btn btn-primary' %>
 <% end %>
 
-<br>
 <br>
 
 <%= link_to 'Back', cafes_path, class: 'btn btn-secondary' %>
