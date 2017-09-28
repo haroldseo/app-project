@@ -1,5 +1,12 @@
 @import "bootstrap";
 
+body {
+    background-image: image-url('background.jpg');
+    background-size:cover;
+    // background-repeat: no-repeat;
+    background-position: 0 -170px;
+}
+
 .btn {
     float: right;
 }
@@ -14,6 +21,6 @@
 .jumbotron {
     margin-left: -40px;
     margin-right: -40px;
-    margin-top: 150px;
+    margin-top: 200px;
     opacity: 0.7;
 }
