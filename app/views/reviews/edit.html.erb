@@ -1,0 +1,12 @@
+
+<%= form_for @review do |f| %>
+<div class="input-group">
+    <%= f.text_field :comment, class: 'form-control' %>
+    <span class="input-group-btn">
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+    </span>
+</div>
+<% end %>
+
+<% cafe = @review.cafe %>
+<%= link_to 'Cancel', cafe_path(cafe) %>

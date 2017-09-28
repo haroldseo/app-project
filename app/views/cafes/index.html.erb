@@ -1,10 +1,11 @@
-
 <ul class='list-group'>
     <% @cafes.each do |c| %>
         <li class='list-group-item'>
             <%= link_to c.name, cafe_path(c) %>
-            <% p_button_text = c.published ? "Unpublish" : "Publish" %>
-            <%= link_to p_button_text, toggle_publish_cafe_path(c), method: :patch, class: 'btn btn-outline-primary btn-sm' %>
+            <% if logged_in? && current_user.admin %>
+                <% p_button_text = c.published ? "Unpublish" : "Publish" %>
+                <%= link_to p_button_text, toggle_publish_cafe_path(c), method: :patch, class: 'btn btn-outline-primary btn-sm' %>
+            <% end %>
         </li>
     <% end %>
 </ul>
