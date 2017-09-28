@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to cafes_path
     else
+      flash[:danger] = "Incorrect Email or Password"
       redirect_to new_session_path
     end
   end

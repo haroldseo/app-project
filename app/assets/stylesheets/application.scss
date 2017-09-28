@@ -1,9 +1,8 @@
 @import "bootstrap";
 
-body {
-    background-image: image-url('background.jpg');
+.homepage {
+    background-image: image-url("background.jpg");
     background-size:cover;
-    // background-repeat: no-repeat;
     background-position: 0 -170px;
 }
 
@@ -11,16 +10,21 @@ body {
     float: right;
 }
 
-// body {
-//     background-image: url("https://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2016/06/15/14/pp-hot-coffee-rf-istock.jpg");
-//     background-repeat: no-repeat;
-//     background-size: 1450px 1100px;
-//     background-position: center;
-// }
-
 .jumbotron {
     margin-left: -40px;
     margin-right: -40px;
     margin-top: 200px;
     opacity: 0.7;
+}
+
+.lead {
+    text-align: right;
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7);
 }
