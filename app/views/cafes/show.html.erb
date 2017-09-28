@@ -22,10 +22,12 @@
 <%= form_for @review do |f| %>
     <%= hidden_field_tag "review[cafe_id]", @cafe.id %>
     <div class="input-group">
-        <%= f.text_field :comment, class: 'form-control', placeholder: 'Add Review' %>
-        <span class="input-group-btn">
-            <%= f.submit 'Post', class: 'btn btn-primary' %>
-        </span>    
+        <% if logged_in? %>
+            <%= f.text_field :comment, class: 'form-control', placeholder: 'Add Review' %>
+            <span class="input-group-btn">
+                <%= f.submit 'Post', class: 'btn btn-primary' %>
+            </span>
+        <% end %>    
     </div>
 <% end %>
 
