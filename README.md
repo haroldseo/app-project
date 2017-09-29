@@ -37,3 +37,4 @@ Click [Here](https://trello.com/b/C6ivbAAa/app-project)
 - Rating system for cafes
 - Better CSS
 - Adjusts to mobile view
+- Location
