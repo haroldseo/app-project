@@ -1,24 +1,36 @@
-# README
+# But First, Coffee
+A full-stack application created for users to find local coffee shops and add reviews.
+## How It Works
+Click "Sign Up" on the top right corner to create an account.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Once created, the user can now add reviews for the coffee shops and suggest new shops that are not listed. The user can also edit and delete reviews that they have posted.
 
-Things you may want to cover:
+Anyone, even guests, have access to view the list of coffee shops and their reviews. 
 
-* Ruby version
+Click [Here](https://infinite-earth-17922.herokuapp.com/cafes) to view the app.
 
-* System dependencies
+## Development and Technologies
+- HTML
+- CSS
+- Ruby
+- Bootstrap front-end library
+- Ruby on Rails web application framework
 
-* Configuration
+## User Stories
 
-* Database creation
+Click [Here](https://trello.com/b/C6ivbAAa/app-project)
 
-* Database initialization
+## Approach Taken
+- Started off by creating a User model, one can create a user 
+- Then a Cafe model, a user can create cafes
+- Then a Review model, each review belongs to a user and a cafe
+- Reviews can be edited and deleted by its user
+- Created a sessions controller, so users can login and logout
+- Anyone can view the page, but must be a user to make changes
 
-* How to run the test suite
+## Wireframes and ERD
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Unsolved Problems and Future Work
+- Rating system for cafes
+- Better CSS
+- Adjusts to mobile view
