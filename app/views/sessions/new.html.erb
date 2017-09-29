@@ -8,6 +8,6 @@
         <%= password_field_tag :password, nil, class: "form-control" %>
     </div>
 
-    <%= submit_tag 'Log In', class: 'btn btn-primary' %>
-    <%= link_to "Don't have an account?", new_user_path %>
+    <%= submit_tag 'Log In', class: 'btn btn-info' %>
+    <%= link_to "Don't have an account?", new_user_path, class: 'no-account-color' %>
 <% end %>

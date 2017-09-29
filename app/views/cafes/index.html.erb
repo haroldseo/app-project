@@ -2,7 +2,7 @@
 <ul class='list-group'>
     <% @cafes.each do |c| %>
         <li class='list-group-item'>
-            <%= link_to c.name, cafe_path(c) %>
+            <%= link_to c.name, cafe_path(c), class: 'cafe-list-color' %>
             <% if logged_in? && current_user.admin %>
                 <% p_button_text = c.published ? "Unpublish" : "Publish" %>
                 <%= link_to p_button_text, toggle_publish_cafe_path(c), method: :patch, class: 'btn btn-outline-primary btn-sm change-btn' %>
@@ -13,5 +13,5 @@
 
 <div class='suggestions'>
     Don't see what you're looking for?
-    <%= link_to "SUGGEST A SHOP", new_cafe_path %>
+    <%= link_to "SUGGEST A SHOP", new_cafe_path, class: 'suggest-color' %>
 </div>
