@@ -2,18 +2,27 @@
 <html>
   <head>
     <title>AppProject</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <% if params[:controller] == 'users' && params[:action] == 'index' %>
+    <% body_class = 'homepage' %>
+  <% else %>
+    <% body_class = '' %>
+  <% end %>
+
   <body>
-    <%= render 'layouts/partials/navbar' %>
-    <%= render 'layouts/partials/flash' %>
-    
-    <div class= "container">
-      <%= yield %>
-    </div>  
+    <div class="bg <%= body_class %>">
+      <%= render 'layouts/partials/navbar' %>
+      <%= render 'layouts/partials/flash' %>
+      
+      <div class="container">
+        <%= yield %>
+      </div> 
+    </div> 
   </body>
 </html>

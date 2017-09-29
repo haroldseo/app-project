@@ -1,15 +1,19 @@
 @import "bootstrap";
 
-.homepage {
-    background-image: image-url("background.jpg");
-    background-size: cover;
-    background-position: 0 -170px;
+body, html {
+    height: 100%;
 }
 
-body {
+.bg {
     background-image: image-url("wooden-table.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -170px;
+}
+
+.homepage {
+    background-image: image-url("background.jpg");
 }
 
 .change-btn {
@@ -19,12 +23,12 @@ body {
 .jumbotron {
     margin-left: -40px;
     margin-right: -40px;
-    margin-top: 195px;
+    margin-top: 175px;
     opacity: 0.7;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
 }
 
-.lead {
+.lead2 {
     text-align: right;
 }
 
@@ -40,6 +44,6 @@ label, .navbar-light .navbar-text, .navbar-light .navbar-nav .nav-link, .suggest
     opacity: 0.8;
 }
 
-img {
-    margin-left: -20px;
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
