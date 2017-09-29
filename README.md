@@ -7,7 +7,7 @@ Once created, the user can now add reviews for the coffee shops and suggest new 
 
 Anyone, even guests, have access to view the list of coffee shops and their reviews. 
 
-Click [Here](https://infinite-earth-17922.herokuapp.com/cafes) to view the app.
+Click [Here](https://infinite-earth-17922.herokuapp.com/) to view the app.
 
 ## Development and Technologies
 - HTML
