@@ -30,6 +30,9 @@ Click [Here](https://trello.com/b/C6ivbAAa/app-project)
 
 ## Wireframes and ERD
 
+![](./readme_img/Project2_Wireframe.png)
+![](./readme_img/Project2_ERD.png)
+
 ## Unsolved Problems and Future Work
 - Rating system for cafes
 - Better CSS
